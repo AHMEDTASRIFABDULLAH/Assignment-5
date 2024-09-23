@@ -147,6 +147,6 @@ document.getElementById("History").addEventListener("click", () => {
   onOf("historySection");
   onO("History");
 });
-document.getElementById("blogbtn").addEventListener("click", () => {
+document.getElementById("blogbtn", "home").addEventListener("click", () => {
   window.location.href = "./blog.html";
 });
