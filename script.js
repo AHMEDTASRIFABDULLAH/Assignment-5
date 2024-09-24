@@ -29,6 +29,7 @@ document.getElementById("cardOneBtn").addEventListener("click", (event) => {
     window.location.reload();
     return;
   }
+
   const cardoneheading = document.getElementById("cardoneheading").innerText;
   const taka = "Taka";
   const data = cardOneValue + " " + taka + " " + cardoneheading;
@@ -43,6 +44,13 @@ document.getElementById("cardOneBtn").addEventListener("click", (event) => {
   const NavtotalMoney = inputText("totalMoney");
   const cardOneInputValue = inputValue("cardOne");
   const navUpdateMoney = NavtotalMoney - cardOneInputValue;
+
+  if (cardOneValue > NavtotalMoney) {
+    alert("Please Add Money");
+    document.getElementById("hidden").classList.add("hidden");
+    window.location.reload();
+    return;
+  }
   if (navUpdateMoney < 0) {
     document.getElementById("cardOne").value = "";
     alert("Please Add Money");
@@ -83,6 +91,14 @@ document.getElementById("cardTwoBtn").addEventListener("click", (event) => {
   const NavtotalMoney = inputText("totalMoney");
   const cardTwoInputValue = inputValue("cardTwo");
   const navUpdateMoney = NavtotalMoney - cardTwoInputValue;
+
+  if (cardTwoValue > NavtotalMoney) {
+    alert("Please Add Money");
+    document.getElementById("hidden").classList.add("hidden");
+    window.location.reload();
+    return;
+  }
+
   if (navUpdateMoney < 0) {
     document.getElementById("cardTwo").value = "";
     alert("Please Add Money");
@@ -123,6 +139,14 @@ document.getElementById("cardThreeBtn").addEventListener("click", (event) => {
   const NavtotalMoney = inputText("totalMoney");
   const cardThreeInputValue = inputValue("cardThree");
   const navUpdateMoney = NavtotalMoney - cardThreeInputValue;
+
+  if (cardThreeValue > NavtotalMoney) {
+    alert("Please Add Money");
+    document.getElementById("hidden").classList.add("hidden");
+    window.location.reload();
+    return;
+  }
+
   if (navUpdateMoney < 0) {
     document.getElementById("cardTwo").value = "";
     alert("Please Add Money");
